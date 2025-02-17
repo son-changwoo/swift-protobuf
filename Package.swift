@@ -13,22 +13,11 @@ import PackageDescription
 
 let package = Package(
     name: "SwiftProtobuf",
+    platforms: [.iOS("16.0")],
     products: [
-        .executable(
-            name: "protoc-gen-swift",
-            targets: ["protoc-gen-swift"]
-        ),
         .library(
             name: "SwiftProtobuf",
             targets: ["SwiftProtobuf"]
-        ),
-        .library(
-            name: "SwiftProtobufPluginLibrary",
-            targets: ["SwiftProtobufPluginLibrary"]
-        ),
-        .plugin(
-            name: "SwiftProtobufPlugin",
-            targets: ["SwiftProtobufPlugin"]
         ),
     ],
     targets: [
